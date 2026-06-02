@@ -1,0 +1,2262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="إعمار وإبداع للمظلات والديكور - متخصصون في تركيب المظلات والسواتر والبرجولات وبيت الشعر الملكي وأعمال الحداد والجبس بورد في جدة ومكة المكرمة">
+  <meta name="keywords" content="مظلات, سواتر, برجولات, بيت شعر ملكي, حداد, جبس بورد, جبس عادي, جي ار سي, ترميم, مظلات جدة, سواتر جدة, مظلات مكة, سواتر مكة, برجولات جدة, تركيب مظلات, مظلات حدائق, مظلات سيارات, مظلات مسابح, ديكور خارجي, ديكور داخلي, مقاولات جدة, تشطيبات, مظلة خشبية, مظلة حديد, مظلة بولي كربون, سواتر خشبية, سواتر حديد, سواتر قماش, خيام ملكية, بيوت شعر, مشاريع ضيافة, تصميم حدائق, مقاول معتمد, أفضل مظلات جدة, شركة مظلات, مؤسسة مظلات جدة">
+  <meta name="author" content="إعمار وإبداع للمظلات والديكور">
+  <meta property="og:title" content="إعمار وإبداع للمظلات والديكور - جدة ومكة">
+  <meta property="og:description" content="متخصصون في تركيب المظلات والسواتر والبرجولات وبيت الشعر الملكي وأعمال الحداد والجبس بورد">
+  <meta property="og:type" content="website">
+  <title>إعمار وإبداع للمظلات والديكور | جدة ومكة</title>
+
+  <!-- Bootstrap 5 RTL -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts Arabic -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css">
+
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --dark: #111111;
+      --darker: #0d0d0d;
+      --charcoal: #1a1a1a;
+      --steel: #2a2a2a;
+      --graphite: #3a3a3a;
+      --silver: #8a8a8a;
+      --light-silver: #c8c8c8;
+      --white: #f5f5f0;
+      --gold: #c9a84c;
+      --gold-light: #e8c87a;
+      --gold-dark: #9a7230;
+      --bronze: #8B6914;
+      --copper: #b87333;
+      --accent: #d4af37;
+      --red-accent: #8b1a1a;
+      --nav-height: 80px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      direction: rtl;
+    }
+
+    /* ========== SCROLLBAR ========== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--dark); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ========== CURSOR (desktop only) ========== */
+    @media (pointer: fine) {
+      .cursor-dot {
+        width: 8px; height: 8px;
+        background: var(--gold);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 99999;
+        transition: transform 0.1s;
+      }
+      .cursor-ring {
+        width: 36px; height: 36px;
+        border: 2px solid var(--gold);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 99998;
+        transition: transform 0.15s, width 0.2s, height 0.2s, opacity 0.2s;
+        opacity: 0.6;
+      }
+    }
+    @media (pointer: coarse) {
+      .cursor-dot, .cursor-ring { display: none !important; }
+    }
+
+    /* ========== PRELOADER ========== */
+    #preloader {
+      position: fixed; inset: 0;
+      background: var(--black);
+      z-index: 99997;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.8s, visibility 0.8s;
+    }
+    #preloader.hide { opacity: 0; visibility: hidden; }
+    .preloader-logo {
+      font-family: 'Amiri', serif;
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 30px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    .preloader-bar {
+      width: 200px; height: 3px;
+      background: var(--steel);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .preloader-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+      border-radius: 2px;
+      animation: loading 2s ease forwards;
+    }
+    @keyframes loading { from { width: 0 } to { width: 100% } }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.7;transform:scale(0.97)} }
+
+    /* ========== NAVBAR ========== */
+    #mainNav {
+      position: fixed; top: 0; width: 100%; z-index: 9999;
+      height: var(--nav-height);
+      background: transparent;
+      transition: all 0.4s ease;
+    }
+    #mainNav.scrolled {
+      background: rgba(10,10,10,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    }
+    .navbar-brand-text {
+      font-family: 'Amiri', serif;
+      font-size: 1.4rem;
+      color: var(--gold) !important;
+      line-height: 1.2;
+    }
+    .brand-sub {
+      font-family: 'Tajawal', sans-serif;
+      font-size: 0.65rem;
+      color: var(--silver);
+      display: block;
+      letter-spacing: 2px;
+    }
+    .nav-link {
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--light-silver) !important;
+      padding: 6px 14px !important;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 50%;
+      width: 0; height: 2px;
+      background: var(--gold);
+      transition: all 0.3s;
+      transform: translateX(50%);
+    }
+    .nav-link:hover { color: var(--gold) !important; }
+    .nav-link:hover::after { width: 80%; }
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold)) !important;
+      color: var(--black) !important;
+      border-radius: 4px;
+      padding: 8px 20px !important;
+      font-weight: 700;
+      transition: all 0.3s !important;
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,168,76,0.4) !important; }
+    .nav-cta::after { display: none; }
+
+    /* ===== TOGGLER FIX ===== */
+    .navbar-toggler {
+      border: 1.5px solid var(--gold) !important;
+      padding: 7px 11px !important;
+      border-radius: 6px !important;
+      background: rgba(201,168,76,0.08) !important;
+      box-shadow: none !important;
+      outline: none !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .navbar-toggler:focus { box-shadow: none !important; outline: none !important; }
+    .navbar-toggler-icon {
+      background-image: none !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 22px;
+      height: 18px;
+    }
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after,
+    .toggler-middle {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .toggler-middle {
+      opacity: 0;
+    }
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Collapse menu on mobile */
+    @media (max-width: 991px) {
+      :root { --nav-height: 70px; }
+      #mainNav {
+        background: rgba(10,10,10,0.98) !important;
+        border-bottom: 1px solid rgba(201,168,76,0.15);
+      }
+      .navbar-collapse {
+        background: rgba(10,10,10,0.99);
+        padding: 16px 20px 20px;
+        border-top: 1px solid rgba(201,168,76,0.2);
+        margin-top: 10px;
+        border-radius: 0 0 12px 12px;
+      }
+      .navbar-nav .nav-link {
+        padding: 10px 8px !important;
+        border-bottom: 1px solid rgba(201,168,76,0.07);
+      }
+      .navbar-nav .nav-link:last-child { border-bottom: none; }
+    }
+
+    /* ========== HERO ========== */
+    #hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--black);
+      padding-top: var(--nav-height);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(139,26,26,0.06) 0%, transparent 50%),
+        linear-gradient(135deg, #0a0a0a 0%, #111 40%, #0d0d0d 100%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridMove 20s linear infinite;
+    }
+    @keyframes gridMove { 0%{background-position:0 0} 100%{background-position:60px 60px} }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.3);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--gold);
+      margin-bottom: 24px;
+      animation: fadeInDown 0.8s ease 0.5s both;
+    }
+    .hero-title {
+      font-family: 'Amiri', serif;
+      font-size: clamp(2.2rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      animation: fadeInUp 0.9s ease 0.7s both;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      color: var(--silver);
+      margin-bottom: 20px;
+      animation: fadeInUp 0.9s ease 0.9s both;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      color: var(--silver);
+      line-height: 1.8;
+      max-width: 580px;
+      margin-bottom: 36px;
+      animation: fadeInUp 0.9s ease 1.1s both;
+    }
+    .hero-btns { animation: fadeInUp 0.9s ease 1.3s both; }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--black);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Tajawal', sans-serif;
+    }
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(201,168,76,0.4); }
+    .btn-outline-gold {
+      background: transparent;
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 13px 32px;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Tajawal', sans-serif;
+    }
+    .btn-outline-gold:hover { background: rgba(201,168,76,0.1); transform: translateY(-3px); }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 50px;
+      animation: fadeInUp 0.9s ease 1.5s both;
+      flex-wrap: wrap;
+    }
+    .hero-stat-num {
+      font-family: 'Amiri', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .hero-stat-label { font-size: 0.8rem; color: var(--silver); margin-top: 4px; }
+    .hero-visual { position: relative; animation: fadeInLeft 1s ease 0.8s both; }
+    .hero-icon-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .hero-icon-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: all 0.4s;
+      cursor: default;
+    }
+    .hero-icon-card:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.06);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(201,168,76,0.15);
+    }
+    .hero-icon-card i { font-size: 2rem; color: var(--gold); margin-bottom: 10px; display: block; }
+    .hero-icon-card span { font-size: 0.85rem; color: var(--light-silver); }
+    .hero-scroll {
+      position: absolute;
+      bottom: 30px; left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--silver);
+      font-size: 0.75rem;
+      animation: bounce 2s infinite;
+    }
+    .hero-scroll i { font-size: 1.2rem; color: var(--gold); }
+    @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+    /* ========== SECTION STYLES ========== */
+    section { padding: 100px 0; }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .section-label::before, .section-label::after {
+      content: '';
+      width: 30px; height: 1px;
+      background: var(--gold);
+    }
+    .section-title {
+      font-family: 'Amiri', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+    .section-title span {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .section-desc {
+      color: var(--silver);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      max-width: 600px;
+    }
+    .divider-gold {
+      width: 60px; height: 3px;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+      border-radius: 2px;
+      margin: 16px 0 32px;
+    }
+
+    /* ========== TICKER ========== */
+    #ticker {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      padding: 14px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .ticker-wrap {
+      display: flex;
+      animation: tickerMove 30s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 40px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--black);
+    }
+    .ticker-item i { font-size: 1rem; }
+    @keyframes tickerMove { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ========== ABOUT ========== */
+    #about { background: var(--darker); }
+    .about-img-wrap { position: relative; }
+    .about-icon-display {
+      background: linear-gradient(135deg, var(--charcoal), var(--steel));
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 16px;
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-icon-display::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(201,168,76,0.1) 0%, transparent 70%);
+    }
+    .about-icon-display i { font-size: 6rem; color: var(--gold); position: relative; z-index: 1; }
+    .about-badge {
+      position: absolute;
+      bottom: -12px; left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--black);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 8px 24px;
+      border-radius: 50px;
+      white-space: nowrap;
+      z-index: 2;
+    }
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .about-feature-icon {
+      width: 50px; height: 50px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+      font-size: 1.2rem;
+    }
+    .about-feature h5 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .about-feature p { font-size: 0.88rem; color: var(--silver); margin: 0; line-height: 1.7; }
+
+    /* ========== SERVICES ========== */
+    #services { background: var(--black); }
+    .service-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 12px;
+      padding: 36px 28px;
+      transition: all 0.4s;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 120px; height: 120px;
+      background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+      transition: all 0.4s;
+    }
+    .service-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(201,168,76,0.12);
+      background: rgba(201,168,76,0.04);
+    }
+    .service-card:hover::before { width: 200px; height: 200px; }
+    .service-icon {
+      width: 70px; height: 70px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+      transition: all 0.3s;
+    }
+    .service-card:hover .service-icon {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--black);
+      transform: rotate(-5deg) scale(1.05);
+    }
+    .service-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
+    .service-card p { font-size: 0.9rem; color: var(--silver); line-height: 1.8; margin: 0; }
+    .service-num {
+      position: absolute;
+      top: 20px; left: 20px;
+      font-family: 'Amiri', serif;
+      font-size: 3rem;
+      color: rgba(201,168,76,0.06);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* ========== WHY US ========== */
+    #why-us { background: var(--darker); }
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 28px;
+      border-radius: 12px;
+      border: 1px solid rgba(201,168,76,0.08);
+      background: rgba(255,255,255,0.02);
+      transition: all 0.4s;
+      margin-bottom: 20px;
+    }
+    .why-item:hover {
+      border-color: rgba(201,168,76,0.3);
+      transform: translateX(-6px);
+      background: rgba(201,168,76,0.03);
+    }
+    .why-num {
+      font-family: 'Amiri', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      min-width: 50px;
+    }
+    .why-text h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+    .why-text p { font-size: 0.88rem; color: var(--silver); margin: 0; line-height: 1.7; }
+    .why-visual {
+      background: linear-gradient(135deg, var(--charcoal), var(--steel));
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 16px;
+      padding: 50px 30px;
+      text-align: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+    .why-big-stat { text-align: center; }
+    .why-big-num {
+      font-family: 'Amiri', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .why-big-label { font-size: 0.9rem; color: var(--silver); margin-top: 6px; }
+
+    /* ========== WORKS FILTER ========== */
+    .works-filter-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+    .wfbtn {
+      padding: 10px 22px;
+      border-radius: 50px;
+      border: 1.5px solid rgba(201,168,76,0.3);
+      background: transparent;
+      color: var(--silver);
+      font-family: 'Tajawal', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .wfbtn:hover { border-color: var(--gold); color: var(--gold); }
+    .wfbtn.active {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      border-color: var(--gold);
+      color: var(--black);
+    }
+    .work-card.hidden { display: none; }
+
+    /* ========== WORKS ========== */
+    #works { background: var(--black); }
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .work-card {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      background: var(--charcoal);
+      border: 1px solid rgba(201,168,76,0.1);
+      cursor: pointer;
+    }
+    .work-card img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+    .work-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(201,168,76,0.2));
+      opacity: 0;
+      transition: opacity 0.4s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .work-card:hover img { transform: scale(1.1); }
+    .work-card:hover .work-card-overlay { opacity: 1; }
+    .zoom-icon {
+      width: 56px; height: 56px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--black);
+      font-size: 1.3rem;
+      transform: scale(0.5);
+      transition: transform 0.3s;
+    }
+    .work-card:hover .zoom-icon { transform: scale(1); }
+
+    /* ========== VIDEO SECTION ========== */
+    #videos { background: var(--darker); }
+    .video-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--charcoal);
+      border: 1px solid rgba(201,168,76,0.15);
+      cursor: pointer;
+    }
+    .video-card video {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .video-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.3s;
+    }
+    .video-play-btn {
+      width: 64px; height: 64px;
+      background: rgba(201,168,76,0.9);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--black);
+      font-size: 1.4rem;
+      transition: all 0.3s;
+    }
+    .video-card:hover .video-overlay { background: rgba(0,0,0,0.2); }
+    .video-card:hover .video-play-btn { transform: scale(1.1); background: var(--gold); }
+    .video-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      padding: 20px 16px 14px;
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* ========== ARTICLE ========== */
+    #article { background: var(--black); }
+    .article-wrap {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 16px;
+      padding: 50px;
+    }
+    .article-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold);
+      padding: 6px 16px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+    .article-title {
+      font-family: 'Amiri', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 24px;
+      line-height: 1.4;
+    }
+    .article-body { color: var(--light-silver); font-size: 1rem; line-height: 2; }
+    .article-body p { margin-bottom: 20px; }
+    .article-body h4 {
+      font-family: 'Amiri', serif;
+      font-size: 1.2rem;
+      color: var(--gold);
+      margin: 28px 0 12px;
+    }
+    .article-body ul { padding-right: 20px; margin-bottom: 20px; }
+    .article-body ul li { margin-bottom: 8px; position: relative; }
+    .article-body ul li::marker { color: var(--gold); }
+    .article-highlight {
+      background: rgba(201,168,76,0.08);
+      border-right: 3px solid var(--gold);
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--light-silver);
+    }
+    .article-keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
+    .keyword-tag {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.2);
+      color: var(--silver);
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      transition: all 0.3s;
+      cursor: default;
+    }
+    .keyword-tag:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.06); }
+
+    /* ========== PROCESS ========== */
+    #process { background: var(--darker); }
+    .process-step {
+      text-align: center;
+      padding: 30px 20px;
+      position: relative;
+    }
+    .process-step::after {
+      content: '';
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width: 50%;
+      height: 2px;
+      background: linear-gradient(to right, var(--gold), transparent);
+    }
+    .process-step:last-child::after { display: none; }
+    [dir=rtl] .process-step::after {
+      left: auto; right: 0;
+      background: linear-gradient(to left, var(--gold), transparent);
+    }
+    .process-icon {
+      width: 80px; height: 80px;
+      background: linear-gradient(135deg, var(--charcoal), var(--steel));
+      border: 2px solid rgba(201,168,76,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.8rem;
+      color: var(--gold);
+      transition: all 0.4s;
+      position: relative;
+    }
+    .process-step:hover .process-icon {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--black);
+      border-color: var(--gold);
+      transform: scale(1.1);
+    }
+    .process-num {
+      position: absolute;
+      top: -8px; right: -8px;
+      width: 24px; height: 24px;
+      background: var(--gold);
+      color: var(--black);
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .process-step h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { font-size: 0.85rem; color: var(--silver); line-height: 1.7; }
+
+    /* ========== MATERIALS ========== */
+    #materials { background: var(--black); }
+    .material-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 12px;
+      padding: 30px 24px;
+      transition: all 0.4s;
+      text-align: center;
+    }
+    .material-card:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.04);
+      transform: translateY(-6px);
+    }
+    .material-card i { font-size: 2.5rem; color: var(--gold); margin-bottom: 16px; display: block; }
+    .material-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .material-card p { font-size: 0.85rem; color: var(--silver); margin: 0; line-height: 1.7; }
+
+    /* ========== COVERAGE ========== */
+    #coverage { background: var(--darker); }
+    .coverage-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 12px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.4s;
+    }
+    .coverage-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(201,168,76,0.1);
+    }
+    .coverage-icon {
+      width: 80px; height: 80px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 2rem;
+      color: var(--gold);
+    }
+    .coverage-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
+    .coverage-card p { font-size: 0.9rem; color: var(--silver); line-height: 1.8; }
+
+    /* ========== TESTIMONIALS ========== */
+    #testimonials { background: var(--black); }
+    .testimonial-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 12px;
+      padding: 36px 30px;
+      height: 100%;
+      transition: all 0.4s;
+    }
+    .testimonial-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-6px); }
+    .testimonial-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 20px; }
+    .testimonial-text { color: var(--light-silver); font-size: 0.95rem; line-height: 1.9; margin-bottom: 24px; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 14px; }
+    .author-avatar {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      color: var(--black);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .author-name { font-size: 0.95rem; font-weight: 700; }
+    .author-loc { font-size: 0.8rem; color: var(--silver); }
+    .testimonial-quote {
+      position: absolute;
+      top: 20px; left: 20px;
+      font-size: 3rem;
+      color: rgba(201,168,76,0.08);
+      font-family: 'Amiri', serif;
+      line-height: 1;
+    }
+
+    /* ========== FAQ ========== */
+    #faq { background: var(--darker); }
+    .faq-item {
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .faq-item.active { border-color: rgba(201,168,76,0.3); }
+    .faq-question {
+      padding: 20px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.98rem;
+      transition: color 0.3s;
+    }
+    .faq-question:hover, .faq-item.active .faq-question { color: var(--gold); }
+    .faq-icon { color: var(--gold); transition: transform 0.3s; flex-shrink: 0; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      padding: 0 24px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      color: var(--silver);
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+    .faq-item.active .faq-answer { padding: 0 24px 20px; max-height: 300px; }
+
+    /* ========== CONTACT ========== */
+    #contact { background: var(--black); }
+    .contact-info-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 12px;
+      padding: 30px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(201,168,76,0.08);
+    }
+    .contact-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .contact-item-icon {
+      width: 48px; height: 48px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-item-label { font-size: 0.8rem; color: var(--silver); }
+    .contact-item-value { font-size: 0.95rem; font-weight: 600; }
+    .contact-item-value a { color: var(--white); text-decoration: none; }
+    .contact-item-value a:hover { color: var(--gold); }
+    .form-wrap {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 16px;
+      padding: 40px;
+    }
+    .form-label { font-size: 0.9rem; font-weight: 600; color: var(--light-silver); margin-bottom: 8px; }
+    .form-control, .form-select {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.15);
+      color: var(--white);
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-family: 'Tajawal', sans-serif;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+    .form-control:focus, .form-select:focus {
+      background: rgba(255,255,255,0.06);
+      border-color: var(--gold);
+      color: var(--white);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+    }
+    .form-control::placeholder { color: var(--graphite); }
+    .form-select option { background: var(--charcoal); }
+    textarea.form-control { min-height: 140px; resize: vertical; }
+
+    /* ========== NUMBERS ========== */
+    #numbers { background: var(--darker); }
+    .number-card {
+      text-align: center;
+      padding: 40px 20px;
+      border: 1px solid rgba(201,168,76,0.1);
+      border-radius: 12px;
+      transition: all 0.4s;
+    }
+    .number-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-6px);
+      background: rgba(201,168,76,0.03);
+    }
+    .number-card i { font-size: 2.2rem; color: var(--gold); margin-bottom: 16px; display: block; }
+    .number-val {
+      font-family: 'Amiri', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .number-label { font-size: 0.9rem; color: var(--silver); margin-top: 8px; }
+
+    /* ========== CTA ========== */
+    #cta {
+      background: linear-gradient(135deg, var(--charcoal) 0%, var(--steel) 100%);
+      border-top: 1px solid rgba(201,168,76,0.2);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #cta::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, rgba(201,168,76,0.08) 0%, transparent 70%);
+    }
+    .cta-title { font-family: 'Amiri', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 16px; }
+    .cta-desc { color: var(--silver); font-size: 1.05rem; max-width: 600px; margin: 0 auto 36px; }
+    .cta-phones { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .cta-phone {
+      display: flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 14px 24px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .cta-phone:hover { background: rgba(201,168,76,0.1); color: var(--gold); transform: translateY(-3px); }
+
+    /* ========== FOOTER ========== */
+    #footer {
+      background: var(--darker);
+      padding: 70px 0 30px;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    .footer-brand { font-family: 'Amiri', serif; font-size: 1.5rem; color: var(--gold); margin-bottom: 14px; }
+    .footer-desc { font-size: 0.9rem; color: var(--silver); line-height: 1.8; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 12px; }
+    .social-btn {
+      width: 40px; height: 40px;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--silver);
+      font-size: 1rem;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    .social-btn:hover { background: var(--gold); color: var(--black); border-color: var(--gold); transform: translateY(-3px); }
+    .footer-heading { font-size: 1rem; font-weight: 700; color: var(--gold); margin-bottom: 20px; position: relative; padding-bottom: 12px; }
+    .footer-heading::after { content: ''; position: absolute; bottom: 0; right: 0; width: 30px; height: 2px; background: var(--gold); }
+    .footer-links { list-style: none; padding: 0; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a {
+      color: var(--silver);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      display: flex; align-items: center; gap: 8px;
+    }
+    section{
+      overflow-x: hidden;
+    }
+    .footer-links a:hover { color: var(--gold); padding-right: 6px; }
+    .footer-links a i { font-size: 0.7rem; }
+    .footer-bottom {
+      border-top: 1px solid rgba(201,168,76,0.1);
+      margin-top: 50px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-bottom p { margin: 0; font-size: 0.85rem; color: var(--silver); }
+    .footer-gmtweb {
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: color 0.3s;
+    }
+    .footer-gmtweb:hover { color: var(--gold-light); }
+
+    /* ========== WHATSAPP FLOAT ========== */
+    .whatsapp-float { position: fixed; bottom: 30px; left: 30px; z-index: 9999; }
+    .wa-btn {
+      display: flex; align-items: center; gap: 10px;
+      background: #25D366;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 30px rgba(37,211,102,0.4);
+      transition: all 0.3s;
+      animation: waPulse 2.5s ease-in-out infinite;
+    }
+    .wa-btn:hover { background: #20c45a; color: white; transform: scale(1.05); }
+    .wa-btn i { font-size: 1.3rem; }
+    @keyframes waPulse { 0%,100%{box-shadow:0 6px 30px rgba(37,211,102,0.4)} 50%{box-shadow:0 6px 50px rgba(37,211,102,0.7)} }
+
+    /* ========== PHONE FLOAT ========== */
+    .phone-float { position: fixed; bottom: 30px; right: 30px; z-index: 9999; }
+    .phone-btn {
+      display: flex; align-items: center;
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--black);
+      border-radius: 50%;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 1.4rem;
+      box-shadow: 0 6px 30px rgba(201,168,76,0.5);
+      transition: all 0.3s;
+      animation: phonePulse 2s ease-in-out infinite;
+    }
+    .phone-btn:hover { transform: scale(1.1) rotate(-15deg); color: var(--black); }
+    @keyframes phonePulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
+
+    /* ========== SCROLL TO TOP ========== */
+    #scrollTop {
+      position: fixed;
+      bottom: 90px; right: 30px;
+      z-index: 9999;
+      width: 44px; height: 44px;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      opacity: 0; visibility: hidden;
+      transition: all 0.3s;
+    }
+    #scrollTop.show { opacity: 1; visibility: visible; }
+    #scrollTop:hover { background: var(--gold); color: var(--black); }
+
+    /* ========== ANIMATIONS ========== */
+    @keyframes fadeInDown { from{opacity:0;transform:translateY(-30px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeInLeft { from{opacity:0;transform:translateX(40px)} to{opacity:1;transform:translateX(0)} }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    .floating { animation: floating 4s ease-in-out infinite; }
+    @keyframes floating { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1199px) {
+      .works-grid { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+    }
+
+    @media (max-width: 991px) {
+      section { padding: 70px 0; }
+      .hero-stats { gap: 24px; }
+      .article-wrap { padding: 30px 24px; }
+      .form-wrap { padding: 28px 20px; }
+    }
+
+    @media (max-width: 767px) {
+      section { padding: 60px 0; }
+      .works-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .hero-stats { gap: 20px; }
+      .hero-stat-num { font-size: 1.8rem; }
+      .process-step::after { display: none; }
+      .whatsapp-float { bottom: 20px; left: 16px; }
+      .phone-float { bottom: 20px; right: 16px; }
+      .wa-btn { padding: 12px 16px; font-size: 0.85rem; }
+      #scrollTop { bottom: 80px; right: 16px; }
+      .hero-desc { display: none; }
+      .article-wrap { padding: 24px 16px; }
+      .form-wrap { padding: 22px 16px; }
+      .wfbtn { padding: 8px 14px; font-size: 0.82rem; }
+    }
+
+    @media (max-width: 575px) {
+      .works-grid { grid-template-columns: repeat(2, 1fr); }
+      .video-card video { height: 180px; }
+      .cta-phone { font-size: 0.95rem; padding: 12px 18px; }
+      .hero-icon-grid { display: none; }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+      .btn-gold, .btn-outline-gold { width: 100%; text-align: center; }
+    }
+
+    @media (max-width: 400px) {
+      .works-filter-btns { gap: 7px; }
+      .wfbtn { padding: 7px 12px; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="preloader-logo"><i class="fa-solid fa-umbrella"></i> إعمار وإبداع</div>
+    <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+        <div style="width:48px;height:48px;background:linear-gradient(135deg,#9a7230,#c9a84c);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--black);flex-shrink:0">
+          <i class="fa-solid fa-umbrella"></i>
+        </div>
+        <div>
+          <div class="navbar-brand-text">إعمار وإبداع</div>
+          <span class="brand-sub">للمظلات والديكور</span>
+        </div>
+      </a>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <span class="toggler-middle"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="#about">من نحن</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">خدماتنا</a></li>
+          <li class="nav-item"><a class="nav-link" href="#works">أعمالنا</a></li>
+          <li class="nav-item"><a class="nav-link" href="#article">المقال</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">الأسئلة</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">تواصل</a></li>
+        </ul>
+        <a href="tel:0561553231" class="nav-link nav-cta d-none d-lg-flex align-items-center gap-2">
+          <i class="fa-solid fa-phone"></i> اتصل الآن
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-star"></i>
+            خبرة أكثر من 15 سنة في الميدان
+          </div>
+          <h1 class="hero-title">
+            إعمار وإبداع<br>
+            <span>للمظلات والديكور</span>
+          </h1>
+          <p class="hero-subtitle">جدة ومكة المكرمة | محترفون في كل تفصيلة</p>
+          <p class="hero-desc">
+            نحن رواد في تنفيذ المظلات والسواتر والبرجولات وبيوت الشعر الملكية وأعمال الحداد والجبس بمختلف أنواعه. نلتزم بالجودة ونحرص على رضاكم في كل مشروع.
+          </p>
+          <div class="hero-btns d-flex flex-wrap gap-3">
+            <a href="#contact" class="btn-gold text-decoration-none">
+              <i class="fa-solid fa-paper-plane me-2"></i>احصل على عرض سعر
+            </a>
+            <a href="#works" class="btn-outline-gold text-decoration-none">
+              <i class="fa-solid fa-images me-2"></i>شاهد أعمالنا
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="text-center">
+              <div class="hero-stat-num" data-target="500">0</div>
+              <div class="hero-stat-label">مشروع منجز</div>
+            </div>
+            <div style="width:1px;background:rgba(201,168,76,0.2)"></div>
+            <div class="text-center">
+              <div class="hero-stat-num" data-target="15">0</div>
+              <div class="hero-stat-label">سنة خبرة</div>
+            </div>
+            <div style="width:1px;background:rgba(201,168,76,0.2)"></div>
+            <div class="text-center">
+              <div class="hero-stat-num" data-target="2">0</div>
+              <div class="hero-stat-label">مدينة نخدمها</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <div class="hero-icon-grid floating">
+            <div class="hero-icon-card" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fa-solid fa-umbrella"></i>
+              <span>مظلات فاخرة</span>
+            </div>
+            <div class="hero-icon-card" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>سواتر محكمة</span>
+            </div>
+            <div class="hero-icon-card" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fa-solid fa-archway"></i>
+              <span>برجولات راقية</span>
+            </div>
+            <div class="hero-icon-card" data-aos="zoom-in" data-aos-delay="400">
+              <i class="fa-solid fa-tent"></i>
+              <span>بيت شعر ملكي</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>استكشف</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ===== TICKER ===== -->
+  <div id="ticker">
+    <div class="ticker-wrap" id="tickerContent">
+      <span class="ticker-item"><i class="fa-solid fa-umbrella"></i> مظلات</span>
+      <span class="ticker-item"><i class="fa-solid fa-shield-halved"></i> سواتر</span>
+      <span class="ticker-item"><i class="fa-solid fa-archway"></i> برجولات</span>
+      <span class="ticker-item"><i class="fa-solid fa-tent"></i> بيت شعر ملكي</span>
+      <span class="ticker-item"><i class="fa-solid fa-screwdriver-wrench"></i> أعمال حداد</span>
+      <span class="ticker-item"><i class="fa-solid fa-layer-group"></i> جبس بورد</span>
+      <span class="ticker-item"><i class="fa-solid fa-brush"></i> جبس عادي</span>
+      <span class="ticker-item"><i class="fa-solid fa-building-columns"></i> جي ار سي</span>
+      <span class="ticker-item"><i class="fa-solid fa-location-dot"></i> جدة ومكة</span>
+      <span class="ticker-item"><i class="fa-solid fa-phone"></i> 0561553231</span>
+      <span class="ticker-item"><i class="fa-solid fa-umbrella"></i> مظلات</span>
+      <span class="ticker-item"><i class="fa-solid fa-shield-halved"></i> سواتر</span>
+      <span class="ticker-item"><i class="fa-solid fa-archway"></i> برجولات</span>
+      <span class="ticker-item"><i class="fa-solid fa-tent"></i> بيت شعر ملكي</span>
+      <span class="ticker-item"><i class="fa-solid fa-screwdriver-wrench"></i> أعمال حداد</span>
+      <span class="ticker-item"><i class="fa-solid fa-layer-group"></i> جبس بورد</span>
+      <span class="ticker-item"><i class="fa-solid fa-brush"></i> جبس عادي</span>
+      <span class="ticker-item"><i class="fa-solid fa-building-columns"></i> جي ار سي</span>
+      <span class="ticker-item"><i class="fa-solid fa-location-dot"></i> جدة ومكة</span>
+      <span class="ticker-item"><i class="fa-solid fa-phone"></i> 0561553231</span>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="about-img-wrap">
+            <div class="about-icon-display">
+              <i class="fa-solid fa-umbrella floating"></i>
+              <div class="about-badge">
+                <i class="fa-solid fa-trophy me-2"></i>الأفضل في جدة ومكة
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="section-label"><span>من نحن</span></div>
+          <h2 class="section-title">إعمار وإبداع<br><span>ليست مجرد شركة</span></h2>
+          <div class="divider-gold"></div>
+          <p class="section-desc mb-4">
+            نحن مؤسسة متخصصة في عالم المظلات والسواتر والديكور الخارجي والداخلي. بدأنا مسيرتنا منذ سنوات بشغف حقيقي لتحويل الفراغات إلى أماكن جميلة وعملية، ولا زلنا نحمل هذا الشغف في كل مشروع نتولاه.
+          </p>
+          <div class="about-feature" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-feature-icon"><i class="fa-solid fa-medal"></i></div>
+            <div>
+              <h5>جودة عالية مضمونة</h5>
+              <p>نستخدم أجود المواد وأحدث الأساليب لضمان متانة كل منتج وجماله على المدى البعيد.</p>
+            </div>
+          </div>
+          <div class="about-feature" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-feature-icon"><i class="fa-solid fa-headset"></i></div>
+            <div>
+              <h5>دعم فني على مدار الساعة</h5>
+              <p>فريقنا دائماً جاهز للرد على استفساراتكم وتقديم أفضل حلول بعد البيع وخدمة الصيانة.</p>
+            </div>
+          </div>
+          <div class="about-feature" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-feature-icon"><i class="fa-solid fa-tags"></i></div>
+            <div>
+              <h5>أسعار تنافسية وشفافة</h5>
+              <p>نقدم أفضل الأسعار دون أي رسوم خفية مع أعلى مستويات الجودة وسرعة التنفيذ.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">خدماتنا</div>
+        <h2 class="section-title">كل ما تحتاجه <span>في مكان واحد</span></h2>
+        <div class="divider-gold mx-auto"></div>
+        <p class="section-desc mx-auto">نقدم مجموعة شاملة من خدمات المظلات والديكور والحداد والجبس لتلبية جميع احتياجاتكم</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card">
+            <div class="service-num">01</div>
+            <div class="service-icon"><i class="fa-solid fa-umbrella"></i></div>
+            <h3>مظلات متعددة</h3>
+            <p>مظلات سيارات وحدائق ومسابح ومداخل بأحدث التصاميم وأجود الخامات من حديد وبولي كربون وقماش.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="service-card">
+            <div class="service-num">02</div>
+            <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>سواتر وحواجز</h3>
+            <p>سواتر خشبية وحديدية وقماشية لضمان الخصوصية التامة مع الأناقة والمتانة في كل الظروف.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card">
+            <div class="service-num">03</div>
+            <div class="service-icon"><i class="fa-solid fa-archway"></i></div>
+            <h3>برجولات حديثة</h3>
+            <p>برجولات خشبية وحديدية راقية تضفي جمالاً معمارياً فريداً على حدائقكم وفناءاتكم.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="service-card">
+            <div class="service-num">04</div>
+            <div class="service-icon"><i class="fa-solid fa-tent"></i></div>
+            <h3>بيت الشعر الملكي</h3>
+            <p>خيام وبيوت شعر ملكية فاخرة بمواصفات احترافية تناسب مجالس الاستقبال الكبرى والأفراح.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card">
+            <div class="service-num">05</div>
+            <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>أعمال الحداد</h3>
+            <p>جميع أعمال الحداد من بوابات وأسوار وتعشيقات وهياكل معدنية بتصاميم مخصصة لكل عميل.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+          <div class="service-card">
+            <div class="service-num">06</div>
+            <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>جبس بورد وترميم</h3>
+            <p>أعمال جبس بورد وجبس عادي وجي ار سي بأشكال هندسية راقية وترميمات متكاملة عالية الجودة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section id="why-us">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="section-label" data-aos="fade-up">لماذا نحن</div>
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">ما يميزنا عن <span>الجميع</span></h2>
+          <div class="divider-gold" data-aos="fade-up" data-aos-delay="150"></div>
+          <div class="why-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="why-num">01</div>
+            <div class="why-text">
+              <h4>فريق متخصص ومحترف</h4>
+              <p>كوادر بشرية مدربة على أعلى مستوى تنفذ كل مشروع باحترافية ودقة متناهية.</p>
+            </div>
+          </div>
+          <div class="why-item" data-aos="fade-up" data-aos-delay="250">
+            <div class="why-num">02</div>
+            <div class="why-text">
+              <h4>مواد خام من أعلى الدرجات</h4>
+              <p>نتعاون مع كبرى الموردين لضمان حصولكم على منتج يتحمل الحرارة والعوامل الجوية.</p>
+            </div>
+          </div>
+          <div class="why-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="why-num">03</div>
+            <div class="why-text">
+              <h4>تنفيذ في الوقت المحدد</h4>
+              <p>نحترم وقتكم ونلتزم بجداول التسليم المتفق عليها دون تأخير أو مبررات.</p>
+            </div>
+          </div>
+          <div class="why-item" data-aos="fade-up" data-aos-delay="350">
+            <div class="why-num">04</div>
+            <div class="why-text">
+              <h4>ضمان شامل بعد التسليم</h4>
+              <p>نقدم ضمان على كافة أعمالنا مع خدمة ما بعد البيع وصيانة دورية.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="why-visual">
+            <i class="fa-solid fa-award" style="font-size:4rem;color:var(--gold)" data-aos="zoom-in"></i>
+            <div class="why-big-stat">
+              <div class="why-big-num" data-target="500">0</div>
+              <div class="why-big-label">مشروع منجز بنجاح</div>
+            </div>
+            <div class="why-big-stat">
+              <div class="why-big-num" data-target="98">0</div>
+              <div class="why-big-label">% نسبة رضا العملاء</div>
+            </div>
+            <div class="why-big-stat">
+              <div class="why-big-num" data-target="15">0</div>
+              <div class="why-big-label">سنة خبرة محترفة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORKS ===== -->
+  <section id="works">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">معرض الأعمال</div>
+        <h2 class="section-title">أعمالنا <span>تتحدث عنا</span></h2>
+        <div class="divider-gold mx-auto"></div>
+        <p class="section-desc mx-auto">شاهد بعضاً من مشاريعنا المنجزة في جدة ومكة المكرمة</p>
+      </div>
+      <div class="works-filter-btns" data-aos="fade-up" data-aos-delay="50">
+        <button class="wfbtn active" data-cat="all"><i class="fa-solid fa-grip"></i> كل الأعمال</button>
+        <button class="wfbtn" data-cat="gypsum"><i class="fa-solid fa-layer-group"></i> جميع أعمال الجبس</button>
+        <button class="wfbtn" data-cat="screens"><i class="fa-solid fa-tv"></i> ديكور الشاشات</button>
+        <button class="wfbtn" data-cat="tent"><i class="fa-solid fa-tent"></i> بيت الشعر الملكي</button>
+        <button class="wfbtn" data-cat="fences"><i class="fa-solid fa-shield-halved"></i> جميع أعمال السواتر</button>
+        <button class="wfbtn" data-cat="shades"><i class="fa-solid fa-umbrella"></i> جميع أعمال المظلات</button>
+      </div>
+      <div class="works-grid" id="worksGrid" data-aos="fade-up" data-aos-delay="100"></div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEOS ===== -->
+  <section id="videos">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">فيديوهات</div>
+        <h2 class="section-title">شاهد <span>أعمالنا بالفيديو</span></h2>
+        <div class="divider-gold mx-auto"></div>
+      </div>
+      <div class="row g-4" id="videosGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process" style="background:var(--black)">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">كيف نعمل</div>
+        <h2 class="section-title">خطوات <span>التنفيذ</span></h2>
+        <div class="divider-gold mx-auto"></div>
+      </div>
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-6 col-md-3">
+          <div class="process-step">
+            <div class="process-icon">
+              <i class="fa-solid fa-phone"></i>
+              <span class="process-num">1</span>
+            </div>
+            <h4>التواصل والاستشارة</h4>
+            <p>اتصل بنا أو أرسل رسالة لمناقشة احتياجاتك</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="process-step">
+            <div class="process-icon">
+              <i class="fa-solid fa-clipboard-list"></i>
+              <span class="process-num">2</span>
+            </div>
+            <h4>المعاينة والتصميم</h4>
+            <p>نزيارة الموقع ونضع التصميم المثالي</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="process-step">
+            <div class="process-icon">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+              <span class="process-num">3</span>
+            </div>
+            <h4>العرض والاتفاق</h4>
+            <p>نقدم عرض سعر مفصل ونوقع العقد</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="process-step">
+            <div class="process-icon">
+              <i class="fa-solid fa-check-double"></i>
+              <span class="process-num">4</span>
+            </div>
+            <h4>التنفيذ والتسليم</h4>
+            <p>ننفذ المشروع ونسلمه في الموعد المحدد</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MATERIALS ===== -->
+  <section id="materials">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">المواد</div>
+        <h2 class="section-title">خامات <span>عالية الجودة</span></h2>
+        <div class="divider-gold mx-auto"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
+          <div class="material-card">
+            <i class="fa-solid fa-industry"></i>
+            <h4>حديد</h4>
+            <p>حديد مجلفن عالي الجودة</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="150">
+          <div class="material-card">
+            <i class="fa-solid fa-tree"></i>
+            <h4>خشب</h4>
+            <p>خشب معالج ضد الحرارة</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
+          <div class="material-card">
+            <i class="fa-solid fa-droplet"></i>
+            <h4>بولي كربون</h4>
+            <p>شفاف ومقاوم للأشعة</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="250">
+          <div class="material-card">
+            <i class="fa-solid fa-wind"></i>
+            <h4>قماش</h4>
+            <p>أقمشة خارجية متينة</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
+          <div class="material-card">
+            <i class="fa-solid fa-layer-group"></i>
+            <h4>جبس بورد</h4>
+            <p>لوحات جبسية معزولة</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-delay="350">
+          <div class="material-card">
+            <i class="fa-solid fa-building-columns"></i>
+            <h4>جي ار سي</h4>
+            <p>للتشكيلات الفنية</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ARTICLE ===== -->
+  <section id="article" style="background:var(--darker)">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">المقال</div>
+        <h2 class="section-title">دليلك الشامل <span>للمظلات والسواتر</span></h2>
+        <div class="divider-gold mx-auto"></div>
+      </div>
+      <div class="article-wrap" data-aos="fade-up" data-aos-delay="100">
+        <div class="article-tag"><i class="fa-solid fa-newspaper"></i> مقال متخصص</div>
+        <h3 class="article-title">كل ما تريد معرفته عن المظلات والسواتر والبرجولات في جدة ومكة</h3>
+        <div class="article-body">
+          <p>في ظل الحرارة الشديدة التي تشهدها المملكة العربية السعودية، وتحديداً مدينتا جدة ومكة المكرمة، باتت <strong>المظلات والسواتر</strong> ضرورة حياتية لا رفاهية. فهي لا تقتصر على توفير الظل والخصوصية، بل تُشكّل جزءاً أصيلاً من الهوية البصرية للمنشآت السكنية والتجارية والفندقية على حدٍّ سواء.</p>
+          <h4><i class="fa-solid fa-umbrella me-2"></i>أنواع المظلات وأيها يناسبك؟</h4>
+          <p>تتنوع المظلات بحسب الغرض والمساحة والميزانية. فمن أبرزها: <strong>مظلات السيارات</strong> التي تحمي مركبتك من الشمس والأمطار، و<strong>مظلات الحدائق</strong> التي تحوّل فناءك إلى جنة خضراء مريحة، و<strong>مظلات المسابح</strong> التي تمنح منطقة الاسترخاء مظهراً فارهاً ووظيفية عالية.</p>
+          <ul>
+            <li>مظلات الحديد المجلفن: الأكثر متانة، تتحمل العوامل البيئية القاسية.</li>
+            <li>مظلات البولي كربون: تسمح بمرور الضوء مع حجب الأشعة فوق البنفسجية.</li>
+            <li>مظلات القماش: خفيفة وأنيقة ومناسبة للمساحات الصغيرة والمتوسطة.</li>
+            <li>مظلات الخشب: تعطي طابعاً طبيعياً دافئاً وتندمج مع تصاميم الحدائق الإنجليزية.</li>
+          </ul>
+          <div class="article-highlight">
+            "الاختيار الصحيح للمظلة يبدأ من فهم الغرض والمساحة والميزانية، ثم اختيار المورد الموثوق الذي يضمن الجودة والتركيب الاحترافي."
+          </div>
+          <h4><i class="fa-solid fa-shield-halved me-2"></i>السواتر: الحل المثالي للخصوصية</h4>
+          <p>يُعدّ السياتر من أهم عناصر تصميم الفضاء الخارجي في بيئتنا العربية، إذ تجمع بين وظيفة الحجب البصري وإضافة جمالية للواجهة. وتشمل خياراتنا: <strong>السواتر الخشبية</strong> ذات الطابع الكلاسيكي الدافئ، و<strong>السواتر الحديدية</strong> المصممة بأشكال هندسية عصرية، فضلاً عن <strong>سواتر القماش</strong> المرنة في التركيب والتصميم.</p>
+          <h4><i class="fa-solid fa-archway me-2"></i>البرجولات: الفن المعماري في الهواء الطلق</h4>
+          <p>البرجولة ليست مجرد هيكل خشبي أو حديدي، بل هي تحفة فنية تُعيد تشكيل الفضاء الخارجي. تُستخدم لتأطير مداخل المنازل والفلل والمطاعم والفنادق، وتُزرع فيها النباتات المتسلقة لتمنح المكان روحاً نابضة بالحياة. نصمم البرجولات وفقاً للمقاسات الدقيقة للموقع مع مراعاة تناسق الألوان مع الواجهة الرئيسية.</p>
+          <h4><i class="fa-solid fa-tent me-2"></i>بيت الشعر الملكي: أصالة وفخامة</h4>
+          <p>يُجسّد بيت الشعر الملكي عراقة الضيافة العربية الأصيلة. نحرص على تنفيذه وفق أعلى المعايير من حيث أقمشة الديوانية والعمدة والتفاصيل الداخلية، ليكون مجلساً يليق بكرامة أصحابه وضيوفهم الكرام.</p>
+          <h4><i class="fa-solid fa-layer-group me-2"></i>الجبس بورد والجبس العادي وجي ار سي</h4>
+          <p>الجبس بورد يُستخدم على نطاق واسع في تشطيبات الأسقف والجدران الداخلية نظراً لمقاومته للرطوبة وسهولة تشكيله. أما الجبس العادي التقليدي فيتميز بمتانته وقدرته على التشكيل المنحوت. وتُعدّ مادة جي ار سي الخيار الأمثل للزخارف والواجهات الخارجية.</p>
+          <h4><i class="fa-solid fa-screwdriver-wrench me-2"></i>أعمال الحداد: القوة والجمال معاً</h4>
+          <p>تُشكّل أعمال الحداد العمود الفقري لمشاريع المظلات والسواتر. نتخصص في تصنيع وتركيب البوابات والأسوار والدرابزين والتعشيقات المعدنية بمختلف الأحجام والتصاميم، مع الحرص على استخدام الحديد المجلفن والمطلي بمواد مقاومة للصدأ.</p>
+          <div class="article-keywords">
+            <span class="keyword-tag">مظلات جدة</span>
+            <span class="keyword-tag">سواتر مكة</span>
+            <span class="keyword-tag">برجولات فاخرة</span>
+            <span class="keyword-tag">بيت شعر ملكي</span>
+            <span class="keyword-tag">حداد جدة</span>
+            <span class="keyword-tag">جبس بورد</span>
+            <span class="keyword-tag">جي ار سي</span>
+            <span class="keyword-tag">مظلات سيارات</span>
+            <span class="keyword-tag">مظلات حدائق</span>
+            <span class="keyword-tag">سواتر خشبية</span>
+            <span class="keyword-tag">سواتر حديد</span>
+            <span class="keyword-tag">تركيب مظلات</span>
+            <span class="keyword-tag">ديكور خارجي</span>
+            <span class="keyword-tag">ترميم جبس</span>
+            <span class="keyword-tag">خيام ملكية</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NUMBERS ===== -->
+  <section id="numbers">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">أرقامنا</div>
+        <h2 class="section-title">إنجازاتنا <span>بالأرقام</span></h2>
+        <div class="divider-gold mx-auto"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="number-card">
+            <i class="fa-solid fa-briefcase"></i>
+            <div class="number-val" data-target="500">0</div>
+            <div class="number-label">مشروع منجز</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+          <div class="number-card">
+            <i class="fa-solid fa-users"></i>
+            <div class="number-val" data-target="350">0</div>
+            <div class="number-label">عميل سعيد</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="number-card">
+            <i class="fa-solid fa-calendar-check"></i>
+            <div class="number-val" data-target="15">0</div>
+            <div class="number-label">سنة خبرة</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="250">
+          <div class="number-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="number-val" data-target="2">0</div>
+            <div class="number-label">مدينة رئيسية</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COVERAGE ===== -->
+  <section id="coverage" style="background:var(--black)">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">التغطية الجغرافية</div>
+        <h2 class="section-title">نخدمك في <span>جدة ومكة</span></h2>
+        <div class="divider-gold mx-auto"></div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="coverage-card">
+            <div class="coverage-icon"><i class="fa-solid fa-city"></i></div>
+            <h3>جدة</h3>
+            <p>نغطي جميع أحياء جدة من الشمالية إلى الجنوبية، ونصل إليك في أسرع وقت. خبرة واسعة في مشاريع جدة السكنية والتجارية والصناعية.</p>
+          </div>
+        </div>
+        <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="coverage-card">
+            <div class="coverage-icon"><i class="fa-solid fa-mosque"></i></div>
+            <h3>مكة المكرمة</h3>
+            <p>نفتخر بخدمة أم القرى ومشاريعها المباركة. نعمل في جميع أحياء مكة ونقدم خدمات متكاملة للمشاريع السكنية والتجارية والفندقية.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" style="background:var(--darker)">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">آراء العملاء</div>
+        <h2 class="section-title">ماذا يقول <span>عملاؤنا</span></h2>
+        <div class="divider-gold mx-auto"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-card position-relative">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="testimonial-text">أعمال ممتازة ومحترفة جداً. ركبوا مظلة سيارة وساتر للحديقة في يوم واحد والنتيجة كانت أكثر من رائعة. شكراً إعمار وإبداع.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">م</div>
+              <div><div class="author-name">محمد الغامدي</div><div class="author-loc"><i class="fa-solid fa-location-dot me-1"></i>جدة</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-card position-relative">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="testimonial-text">بيت الشعر الذي نفذوه لنا في العرس كان تحفة فنية حقيقية. الجميع أشاد بالتصميم والتنفيذ. سأتعامل معهم في كل مناسباتي القادمة.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">خ</div>
+              <div><div class="author-name">خالد الشهري</div><div class="author-loc"><i class="fa-solid fa-location-dot me-1"></i>مكة المكرمة</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-card position-relative">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+            <p class="testimonial-text">أسقف الجبس بورد في فيلتي جاءت بشكل يفوق توقعاتي. السعر معقول والتسليم في الموعد. أنصح الجميع بالتعامل مع هذا الفريق المحترف.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">ع</div>
+              <div><div class="author-name">عبدالرحمن القرشي</div><div class="author-loc"><i class="fa-solid fa-location-dot me-1"></i>جدة</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">الأسئلة الشائعة</div>
+        <h2 class="section-title">أسئلة <span>يسألها عملاؤنا</span></h2>
+        <div class="divider-gold mx-auto"></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="faq-item">
+            <div class="faq-question"><span>ما هي المناطق التي تغطونها؟</span><i class="fa-solid fa-plus faq-icon"></i></div>
+            <div class="faq-answer">نعمل في جميع أحياء مدينة جدة ومكة المكرمة، ونستطيع الوصول إليك أينما كنت في هاتين المدينتين.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>هل تقدمون ضماناً على أعمالكم؟</span><i class="fa-solid fa-plus faq-icon"></i></div>
+            <div class="faq-answer">نعم، نقدم ضماناً شاملاً على جميع أعمالنا مع خدمة ما بعد البيع والصيانة الدورية لضمان رضاكم التام.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>كم يستغرق تنفيذ مشروع المظلة؟</span><i class="fa-solid fa-plus faq-icon"></i></div>
+            <div class="faq-answer">يعتمد وقت التنفيذ على حجم المشروع ونوعه. المظلات الصغيرة تُنفَّذ في يوم أو يومين، بينما المشاريع الكبيرة قد تستغرق أسبوعاً أو أكثر.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>هل تقدمون خدمة المعاينة المجانية؟</span><i class="fa-solid fa-plus faq-icon"></i></div>
+            <div class="faq-answer">نعم، نقدم خدمة المعاينة والاستشارة المجانية في الموقع لتقديم أفضل حل يناسب احتياجاتكم وميزانيتكم.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>ما هي طرق الدفع المتاحة؟</span><i class="fa-solid fa-plus faq-icon"></i></div>
+            <div class="faq-answer">نقبل الدفع نقداً وعبر التحويل البنكي ومدى وفيزا. كما نوفر خيار الدفع على مراحل لبعض المشاريع الكبيرة.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question"><span>هل تعملون في أيام الإجازات والعطل؟</span><i class="fa-solid fa-plus faq-icon"></i></div>
+            <div class="faq-answer">نعم، فريقنا متاح للتواصل والاستشارة طوال أيام الأسبوع، ويمكن ترتيب زيارات الموقع بحسب الاتفاق مع العميل.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" style="background:var(--darker)">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <div class="section-label justify-content-center">تواصل معنا</div>
+        <h2 class="section-title">احصل على <span>عرض سعر مجاني</span></h2>
+        <div class="divider-gold mx-auto"></div>
+        <p class="section-desc mx-auto">تواصل معنا الآن واحصل على استشارة مجانية وعرض سعر في أسرع وقت</p>
+      </div>
+      <div class="row g-5">
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="contact-info-card">
+            <h4 class="mb-4" style="color:var(--gold);font-family:'Amiri',serif">معلومات التواصل</h4>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <div class="contact-item-label">رقم الهاتف الأول</div>
+                <div class="contact-item-value"><a href="tel:0561553231">0561553231</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <div class="contact-item-label">رقم الهاتف الثاني</div>
+                <div class="contact-item-value"><a href="tel:0506105073">0506105073</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <div class="contact-item-label">واتساب</div>
+                <div class="contact-item-value"><a href="https://wa.me/966561553231" target="_blank">تواصل عبر واتساب</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="contact-item-label">مناطق الخدمة</div>
+                <div class="contact-item-value">جدة ومكة المكرمة</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <div class="contact-item-label">أوقات العمل</div>
+                <div class="contact-item-value">السبت – الخميس | 8ص – 10م</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="form-wrap">
+            <h4 class="mb-4" style="color:var(--gold);font-family:'Amiri',serif"><i class="fa-solid fa-paper-plane me-2"></i>أرسل لنا رسالتك</h4>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">الاسم الكريم</label>
+                <input type="text" class="form-control" id="fname" placeholder="أدخل اسمك الكريم">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">رقم الجوال</label>
+                <input type="tel" class="form-control" id="fphone" placeholder="05XXXXXXXX">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">المدينة</label>
+                <select class="form-select" id="fcity">
+                  <option value="" selected disabled>اختر المدينة</option>
+                  <option value="جدة">جدة</option>
+                  <option value="مكة المكرمة">مكة المكرمة</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">نوع الخدمة</label>
+                <select class="form-select" id="fservice">
+                  <option value="" selected disabled>اختر الخدمة</option>
+                  <option>مظلات</option>
+                  <option>سواتر</option>
+                  <option>برجولات</option>
+                  <option>بيت شعر ملكي</option>
+                  <option>أعمال حداد</option>
+                  <option>جبس بورد</option>
+                  <option>جبس عادي / جي ار سي</option>
+                  <option>خدمات متعددة</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">رسالتك</label>
+                <textarea class="form-control" id="fmsg" placeholder="اشرح متطلبات مشروعك باختصار..."></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn-gold w-100 py-3 border-0" onclick="sendToWhatsApp()">
+                  <i class="fa-brands fa-whatsapp me-2"></i>إرسال عبر واتساب
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <div id="cta">
+    <div class="container position-relative">
+      <div data-aos="fade-up">
+        <div class="section-label justify-content-center">اتصل الآن</div>
+        <h2 class="cta-title">جاهزون لخدمتك <span style="background:linear-gradient(135deg,var(--gold-dark),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">على مدار الساعة</span></h2>
+        <p class="cta-desc">تواصل معنا الآن واحصل على استشارة مجانية وعرض سعر في أسرع وقت</p>
+        <div class="cta-phones">
+          <a href="tel:0561553231" class="cta-phone"><i class="fa-solid fa-phone"></i>0561553231</a>
+          <a href="tel:0506105073" class="cta-phone"><i class="fa-solid fa-phone"></i>0506105073</a>
+          <a href="https://wa.me/966561553231" class="cta-phone" target="_blank" style="background:rgba(37,211,102,0.1);border-color:rgba(37,211,102,0.3);color:#25D366">
+            <i class="fa-brands fa-whatsapp"></i>واتساب
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div style="width:48px;height:48px;background:linear-gradient(135deg,#9a7230,#c9a84c);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--black);flex-shrink:0">
+              <i class="fa-solid fa-umbrella"></i>
+            </div>
+            <div class="footer-brand">إعمار وإبداع</div>
+          </div>
+          <p class="footer-desc">متخصصون في تنفيذ المظلات والسواتر والبرجولات وبيت الشعر الملكي وأعمال الحداد والجبس بمختلف أنواعه في جدة ومكة.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/966561553231" class="social-btn" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:0561553231" class="social-btn"><i class="fa-solid fa-phone"></i></a>
+            <a href="tel:0506105073" class="social-btn"><i class="fa-solid fa-mobile-screen"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="footer-heading">روابط سريعة</h6>
+          <ul class="footer-links">
+            <li><a href="#about"><i class="fa-solid fa-chevron-left"></i>من نحن</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-left"></i>خدماتنا</a></li>
+            <li><a href="#works"><i class="fa-solid fa-chevron-left"></i>أعمالنا</a></li>
+            <li><a href="#videos"><i class="fa-solid fa-chevron-left"></i>فيديوهاتنا</a></li>
+            <li><a href="#article"><i class="fa-solid fa-chevron-left"></i>المقال</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="footer-heading">خدماتنا</h6>
+          <ul class="footer-links">
+            <li><a href="#services"><i class="fa-solid fa-chevron-left"></i>مظلات سيارات</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-left"></i>سواتر خصوصية</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-left"></i>برجولات</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-left"></i>بيت شعر ملكي</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-left"></i>جبس بورد</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="footer-heading">اتصل بنا</h6>
+          <ul class="footer-links">
+            <li><a href="tel:0561553231"><i class="fa-solid fa-phone"></i>0561553231</a></li>
+            <li><a href="tel:0506105073"><i class="fa-solid fa-phone"></i>0506105073</a></li>
+            <li><a href="#coverage"><i class="fa-solid fa-location-dot"></i>جدة</a></li>
+            <li><a href="#coverage"><i class="fa-solid fa-location-dot"></i>مكة المكرمة</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 إعمار وإبداع للمظلات والديكور — جميع الحقوق محفوظة</p>
+        <a href="https://www.facebook.com/profile.php?id=100090592885243&locale=ar_AR" target="_blank" class="footer-gmtweb">
+          <i class="fa-solid fa-code me-1"></i>تم التصميم بواسطة GMTWEB
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/966561553231" class="wa-btn" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>واتساب</span>
+    </a>
+  </div>
+  <div class="phone-float">
+    <a href="tel:0561553231" class="phone-btn">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+  <div id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-chevron-up"></i>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js"></script>
+
+  <script>
+    // ===== PRELOADER =====
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('preloader').classList.add('hide');
+      }, 2200);
+    });
+
+    // ===== CURSOR (desktop only) =====
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const dot = document.getElementById('cursorDot');
+      const ring = document.getElementById('cursorRing');
+      let mx = 0, my = 0, rx = 0, ry = 0;
+      document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        dot.style.left = mx - 4 + 'px';
+        dot.style.top = my - 4 + 'px';
+      });
+      function animateRing() {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx - 18 + 'px';
+        ring.style.top = ry - 18 + 'px';
+        requestAnimationFrame(animateRing);
+      }
+      animateRing();
+      document.querySelectorAll('a, button, .service-card, .work-card').forEach(el => {
+        el.addEventListener('mouseenter', () => { ring.style.width='56px'; ring.style.height='56px'; ring.style.opacity='0.9'; dot.style.transform='scale(0)'; });
+        el.addEventListener('mouseleave', () => { ring.style.width='36px'; ring.style.height='36px'; ring.style.opacity='0.6'; dot.style.transform='scale(1)'; });
+      });
+    }
+
+    // ===== NAVBAR =====
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
+      document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 400);
+    });
+
+    // ===== AOS =====
+    AOS.init({ duration: 700, once: true, offset: 60 });
+
+    // ===== COUNTER =====
+    function animateCounter(el) {
+      const target = +el.dataset.target;
+      const duration = 2000;
+      const step = target / (duration / 16);
+      let current = 0;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = Math.round(current);
+      }, 16);
+    }
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterObserver.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+
+    // ===== BUILD WORKS GRID =====
+    const workCategories = {
+      shades:  [72,73,74,75,76,77,78,79,80,81,82,83,84,85,86],
+      fences:  [54,55,56,57,58,59,60,61,62,63,64,65,66],
+      tent:    [17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53],
+      screens: [10,11,12,13,14,15,16,67,68,69,70,71],
+      gypsum:  [1,2,3,4,5,6,7,8,9]
+    };
+    const worksGrid = document.getElementById('worksGrid');
+    for (let i = 1; i <= 86; i++) {
+      let cat = 'shades';
+      for (const [key, nums] of Object.entries(workCategories)) {
+        if (nums.includes(i)) { cat = key; break; }
+      }
+      const card = document.createElement('a');
+      card.href = `Css/${i}.jpeg`;
+      card.className = 'work-card glightbox';
+      card.dataset.cat = cat;
+      card.setAttribute('data-gallery', 'works');
+      card.setAttribute('data-glightbox', `title=مشروع ${i}`);
+      card.setAttribute('data-aos', 'zoom-in');
+      card.setAttribute('data-aos-delay', Math.min((i % 8) * 50, 300));
+      card.innerHTML = `
+        <img src="Css/${i}.jpeg" alt="مشروع ${i} - إعمار وإبداع" loading="lazy" onerror="this.parentElement.style.background='var(--steel)';this.style.display='none'">
+        <div class="work-card-overlay">
+          <div class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+        </div>`;
+      worksGrid.appendChild(card);
+    }
+
+    // ===== FILTER LOGIC =====
+    document.querySelector('.works-filter-btns').addEventListener('click', e => {
+      const btn = e.target.closest('.wfbtn');
+      if (!btn) return;
+      document.querySelectorAll('.wfbtn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      document.querySelectorAll('.work-card').forEach(c => {
+        c.classList.toggle('hidden', cat !== 'all' && c.dataset.cat !== cat);
+      });
+      AOS.refresh();
+    });
+
+    // ===== BUILD VIDEOS GRID =====
+    const videoTitles = ["أعمال جبس","ديكور شاشات","أعمال جبس","ديكور شاشات","ديكور شاشات","ديكور شاشات","ديكور شاشات"];
+    const videosGrid = document.getElementById('videosGrid');
+    for (let i = 2; i <= 8; i++) {
+      const col = document.createElement('div');
+      col.className = 'col-md-6 col-lg-3';
+      col.setAttribute('data-aos', 'fade-up');
+      col.setAttribute('data-aos-delay', i * 100);
+      col.innerHTML = `
+        <div class="video-card glightbox" data-gallery="videos" data-href="Css/v${i}.mp4" data-glightbox="type: video; title: ${videoTitles[i-2]}">
+          <video src="Css/v${i}.mp4" muted loop playsinline preload="metadata"></video>
+          <div class="video-overlay">
+            <div class="video-play-btn"><i class="fa-solid fa-play"></i></div>
+          </div>
+          <div class="video-label"><i class="fa-solid fa-video me-2"></i>${videoTitles[i-2]}</div>
+        </div>`;
+      videosGrid.appendChild(col);
+    }
+
+    GLightbox({ selector: '.glightbox', autoplayVideos: true });
+
+    document.querySelectorAll('.video-card video').forEach(v => {
+      const card = v.closest('.video-card');
+      card.addEventListener('mouseenter', () => v.play().catch(()=>{}));
+      card.addEventListener('mouseleave', () => { v.pause(); v.currentTime = 0; });
+    });
+
+    // ===== FAQ =====
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.closest('.faq-item');
+        const isOpen = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(fi => fi.classList.remove('active'));
+        if (!isOpen) item.classList.add('active');
+      });
+    });
+
+    // ===== WHATSAPP FORM =====
+    function sendToWhatsApp() {
+      const name = document.getElementById('fname').value.trim() || 'لم يذكر';
+      const phone = document.getElementById('fphone').value.trim() || 'لم يذكر';
+      const city = document.getElementById('fcity').value || 'لم تحدد';
+      const service = document.getElementById('fservice').value || 'لم تحدد';
+      const msg = document.getElementById('fmsg').value.trim() || 'لا يوجد';
+      const text = `السلام عليكم، أود الاستفسار عن خدماتكم:\n\nالاسم: ${name}\nالجوال: ${phone}\nالمدينة: ${city}\nنوع الخدمة: ${service}\nتفاصيل: ${msg}`;
+      window.open(`https://wa.me/966561553231?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    // ===== PARALLAX HERO GRID =====
+    window.addEventListener('scroll', () => {
+      const heroGrid = document.querySelector('.hero-grid');
+      if (heroGrid) heroGrid.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+    });
+  </script>
+</body>
+</html>
